@@ -22,6 +22,8 @@ This repository will continue to grow as I learn more LangChain concepts.
 11. [Git & Version Control Workflow](#11-git--version-control-workflow)
 12. [Future Learning Topics](#12-future-learning-topics)
 13. [Why Each Step Matters](#Why-Each-Step-Matters)
+14. [Quick Comparison Table](#Quick-Comparison-Table)
+15. [Common Pattern (All Loaders)](#Common-Pattern-(All-Loaders))
 
 ---
 
