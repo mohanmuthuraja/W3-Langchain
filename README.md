@@ -9,18 +9,18 @@ This repository will continue to grow as I learn more LangChain concepts.
 
 # Table of Contents
 
-1. Project Overview(#-1.-Project-Overview)
-2. Tools & Technologies Used
-3. Project Files
-4. Environment Setup
-5. Introduction to LangChain
-6. Understanding Document Loaders
-7. Example: Loading Documents with LangChain
-8. Example: Arxiv Research Paper Loader
-9. Working with Jupyter Notebook in VS Code
-10. How to Run This Project
-11. Git & Version Control Workflow
-12. Future Learning Topics
+1. [Project Overview](#1-project-overview)
+2. [Tools & Technologies Used](#2-tools--technologies-used)
+3. [Project Files](#3-project-files)
+4. [Environment Setup](#4-environment-setup)
+5. [Introduction to LangChain](#5-introduction-to-langchain)
+6. [Understanding Document Loaders](#6-understanding-document-loaders)
+7. [Example: Loading Documents with LangChain](#7-example-loading-documents-with-langchain)
+8. [Example: Arxiv Research Paper Loader](#8-example-arxiv-research-paper-loader)
+9. [Working with Jupyter Notebook in VS Code](#9-working-with-jupyter-notebook-in-vs-code)
+10. [How to Run This Project](#10-how-to-run-this-project)
+11. [Git & Version Control Workflow](#11-git--version-control-workflow)
+12. [Future Learning Topics](#12-future-learning-topics)
 
 ---
 
