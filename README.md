@@ -9,7 +9,7 @@ This repository will continue to grow as I learn more LangChain concepts.
 
 # Table of Contents
 
-1. Project Overview
+1. Project Overview(# 1. Project Overview)
 2. Tools & Technologies Used
 3. Project Files
 4. Environment Setup
