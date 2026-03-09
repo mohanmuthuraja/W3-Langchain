@@ -21,6 +21,7 @@ This repository will continue to grow as I learn more LangChain concepts.
 10. [How to Run This Project](#10-how-to-run-this-project)
 11. [Git & Version Control Workflow](#11-git--version-control-workflow)
 12. [Future Learning Topics](#12-future-learning-topics)
+13. [Why Each Step Matters](#Why-Each-Step-Matters)
 
 ---
 
