@@ -261,7 +261,36 @@ git push
 
 This allows the project to be accessed from **multiple machines (home laptop / office laptop)**.
 
----
+### Why Each Step Matters
+
+| Step | Purpose | Analogy |
+|------|---------|---------|
+| **Load** | Get data into system | Opening a book |
+| **Split** | Fit into context window | Cutting into digestible pages |
+| **Embed** | Convert to searchable format | Creating an index |
+| **Store** | Enable fast retrieval | Organizing in a library |
+| **Retrieve** | Find relevant info | Searching the index |
+| **Generate** | Create answer | Reading and summarizing |
+
+## 📊 Quick Comparison Table
+
+| Source Type | Loader Class | Output Format | Best For |
+|-------------|--------------|---------------|----------|
+| **PDF** | `PyPDFLoader` | One doc per page | Reports, books, papers |
+| **Text** | `TextLoader` | One doc total | Notes, logs, configs |
+| **Web** | `WebBaseLoader` | One doc per URL | Blogs, articles, docs |
+| **Wikipedia** | `WikipediaLoader` | Multiple articles | Research, definitions |
+
+### Common Pattern (All Loaders)
+```python
+# 1. Import
+from langchain_community.document_loaders import [LoaderName]
+
+# 2. Initialize
+loader = LoaderName("source")
+
+# 3. Load
+docs = loader.load()
 
 # 12. Future Learning Topics
 
