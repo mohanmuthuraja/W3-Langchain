@@ -75,9 +75,10 @@ To run this project locally:
 
 ### Install Python
 
-Download Python from:
+python -m venv venv
 
-https://www.python.org/
+Activate the environment 
+
 
 ---
 
