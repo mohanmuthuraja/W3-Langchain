@@ -9,8 +9,6 @@ This repository will continue to grow as I learn more LangChain concepts.
 
 # Table of Contents
 
-# Table of Contents
-
 1. [Project Overview](#1-project-overview)
 2. [Tools & Technologies Used](#2-tools--technologies-used)
 3. [Project Files](#3-project-files)
