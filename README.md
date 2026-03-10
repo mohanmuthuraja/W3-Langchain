@@ -24,8 +24,9 @@ This repository will continue to grow as I learn more LangChain concepts.
 13. [Why Each Step Matters](#Why-Each-Step-Matters)
 14. [Quick Comparison Table](#Quick-Comparison-Table)
 15. [Common Pattern (All Loaders)](#Common-Pattern-(All-Loaders))
-16. [Text Splitters](#Text-Splitters)
-17. [Visual Flow Comparison](#Visual-Flow-Comparison)
+16. [Text Splitter](#text-splitter)
+17. [CharacterTextSplitter vs RecursiveCharacterTextSplitter](#charactertextsplitter-vs-recursivecharactertextsplitter)
+
 
 ---
 
@@ -297,8 +298,13 @@ loader = LoaderName("source")
 # 3. Load
 docs = loader.load()
 
-# Text Splitters
-# CharacterTextSplitter vs RecursiveCharacterTextSplitter
+
+
+
+
+
+# Text Splitter
+## CharacterTextSplitter vs RecursiveCharacterTextSplitter
 
 When working with LangChain, large documents must be split into smaller chunks before sending them to embeddings or LLMs. Two commonly used splitters are:
 
@@ -328,8 +334,7 @@ chunk_overlap = 5
 ```
 
 ---
-
-# 1. CharacterTextSplitter
+# CharacterTextSplitter
 
 `CharacterTextSplitter` splits text **strictly based on character limits**.
 It does not try to preserve sentence or word boundaries.
@@ -362,7 +367,7 @@ splitter = CharacterTextSplitter(
 
 ---
 
-# 2. RecursiveCharacterTextSplitter
+# RecursiveCharacterTextSplitter
 
 `RecursiveCharacterTextSplitter` is smarter.
 It tries multiple separators in the following order:
@@ -480,7 +485,7 @@ https://python.langchain.com/docs/modules/data_connection/document_transformers/
 # visual comparision ( CharacterTextSplitter vs RecursiveCharacterTextSplitter)
 ---
 
-# Visual Flow Comparison
+# 17. Visual Flow Comparison
 
 Below is a simplified visual flow showing how each splitter processes the same text.
 
