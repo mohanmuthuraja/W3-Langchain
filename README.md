@@ -303,7 +303,7 @@ docs = loader.load()
 
 
 
-# Text Splitter
+### Text Splitter
 ## CharacterTextSplitter vs RecursiveCharacterTextSplitter
 
 When working with LangChain, large documents must be split into smaller chunks before sending them to embeddings or LLMs. Two commonly used splitters are:
