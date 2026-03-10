@@ -9,6 +9,8 @@ This repository will continue to grow as I learn more LangChain concepts.
 
 # Table of Contents
 
+# Table of Contents
+
 1. [Project Overview](#1-project-overview)
 2. [Tools & Technologies Used](#2-tools--technologies-used)
 3. [Project Files](#3-project-files)
@@ -23,9 +25,9 @@ This repository will continue to grow as I learn more LangChain concepts.
 12. [Future Learning Topics](#12-future-learning-topics)
 13. [Why Each Step Matters](#why-each-step-matters)
 14. [Quick Comparison Table](#quick-comparison-table)
-15. [Common Pattern (All Loaders)](#common-pattern-(all-loaders))
+15. [Common Pattern (All Loaders)](#common-pattern-all-loaders)
 16. [Text Splitter](#text-splitter)
-17. [CharacterTextSplitter vs RecursiveCharacterTextSplitter](#charactertextsplitter-vs-recursivecharactertextsplitter)
+17. [CharacterTextSplitter vs RecursiveCharacterTextSplitter](#charactertextsplitter-vs-recursivecharactertextsplitter)er)
 
 
 ---
