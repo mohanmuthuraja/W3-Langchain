@@ -20,12 +20,11 @@ This repository will continue to grow as I learn more LangChain concepts.
 9. [Working with Jupyter Notebook in VS Code](#9-working-with-jupyter-notebook-in-vs-code)
 10. [How to Run This Project](#10-how-to-run-this-project)
 11. [Git & Version Control Workflow](#11-git--version-control-workflow)
-12. [Future Learning Topics](#12-future-learning-topics)
-13. [Why Each Step Matters](#why-each-step-matters)
-14. [Quick Comparison Table](#quick-comparison-table)
-15. [Common Pattern (All Loaders)](#common-pattern-all-loaders)
-16. [Text Splitter](#text-splitter)
-17. [CharacterTextSplitter vs RecursiveCharacterTextSplitter](#charactertextsplitter-vs-recursivecharactertextsplitter)er)
+12. [Why Each Step Matters](#why-each-step-matters)
+13. [Quick Comparison Table](#quick-comparison-table)
+14. [Common Pattern (All Loaders)](#common-pattern-all-loaders)
+15. [Text Splitter](#text-splitter)
+16. [CharacterTextSplitter vs RecursiveCharacterTextSplitter](#charactertextsplitter-vs-recursivecharactertextsplitter)er)
 
 
 ---
@@ -267,7 +266,7 @@ git push
 
 This allows the project to be accessed from **multiple machines (home laptop / office laptop)**.
 
-### Why Each Step Matters
+### 12. Why Each Step Matters
 
 | Step | Purpose | Analogy |
 |------|---------|---------|
@@ -278,7 +277,7 @@ This allows the project to be accessed from **multiple machines (home laptop / o
 | **Retrieve** | Find relevant info | Searching the index |
 | **Generate** | Create answer | Reading and summarizing |
 
-## 📊 Quick Comparison Table
+## 13. Quick Comparison Table
 
 | Source Type | Loader Class | Output Format | Best For |
 |-------------|--------------|---------------|----------|
@@ -287,7 +286,7 @@ This allows the project to be accessed from **multiple machines (home laptop / o
 | **Web** | `WebBaseLoader` | One doc per URL | Blogs, articles, docs |
 | **Wikipedia** | `WikipediaLoader` | Multiple articles | Research, definitions |
 
-### Common Pattern (All Loaders)
+## 14. Common Pattern (All Loaders)
 ```python
 # 1. Import
 from langchain_community.document_loaders import [LoaderName]
@@ -298,12 +297,7 @@ loader = LoaderName("source")
 # 3. Load
 docs = loader.load()
 
-
-
-
-
-
-## Text Splitter
+## 15. Text Splitter
 ### CharacterTextSplitter vs RecursiveCharacterTextSplitter
 
 When working with LangChain, large documents must be split into smaller chunks before sending them to embeddings or LLMs. Two commonly used splitters are:
