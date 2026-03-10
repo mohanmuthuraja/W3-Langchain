@@ -21,9 +21,9 @@ This repository will continue to grow as I learn more LangChain concepts.
 10. [How to Run This Project](#10-how-to-run-this-project)
 11. [Git & Version Control Workflow](#11-git--version-control-workflow)
 12. [Future Learning Topics](#12-future-learning-topics)
-13. [Why Each Step Matters](#Why-Each-Step-Matters)
-14. [Quick Comparison Table](#Quick-Comparison-Table)
-15. [Common Pattern (All Loaders)](#Common-Pattern-(All-Loaders))
+13. [Why Each Step Matters](#why-each-step-matters)
+14. [Quick Comparison Table](#quick-comparison-table)
+15. [Common Pattern (All Loaders)](#common-pattern-(all-loaders))
 16. [Text Splitter](#text-splitter)
 17. [CharacterTextSplitter vs RecursiveCharacterTextSplitter](#charactertextsplitter-vs-recursivecharactertextsplitter)
 
@@ -303,8 +303,8 @@ docs = loader.load()
 
 
 
-### Text Splitter
-## CharacterTextSplitter vs RecursiveCharacterTextSplitter
+## Text Splitter
+### CharacterTextSplitter vs RecursiveCharacterTextSplitter
 
 When working with LangChain, large documents must be split into smaller chunks before sending them to embeddings or LLMs. Two commonly used splitters are:
 
