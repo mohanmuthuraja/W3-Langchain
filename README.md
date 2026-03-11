@@ -20,12 +20,12 @@ This repository will continue to grow as I learn more LangChain concepts.
 9. [Working with Jupyter Notebook in VS Code](#9-working-with-jupyter-notebook-in-vs-code)
 10. [How to Run This Project](#10-how-to-run-this-project)
 11. [Git & Version Control Workflow](#11-git--version-control-workflow)
-12. [Future Learning Topics](#12-future-learning-topics)
-13. [Why Each Step Matters](#Why-Each-Step-Matters)
-14. [Quick Comparison Table](#Quick-Comparison-Table)
-15. [Common Pattern (All Loaders)](#Common-Pattern-(All-Loaders))
-16. [Text Splitters](#Text-Splitters)
-17. [Visual Flow Comparison](#Visual-Flow-Comparison)
+12. [Why Each Step Matters](#12-why-each-step-matters)
+13. [Quick Comparison Table](#13-quick-comparison-table)
+14. [Common Pattern (All Loaders)](#14-common-pattern-all-loaders)
+15. [Text Splitter](#15-text-splitter)
+16. [Visual Flow Comparison](#16-visual-flow-comparison)
+17. [Future Learning Topics](#17-future-learning-topics)
 
 ---
 
@@ -80,10 +80,11 @@ To run this project locally:
 
 ### Install Python
 
+```bash
 python -m venv venv
+```
 
 Activate the environment 
-
 
 ---
 
@@ -91,7 +92,7 @@ Activate the environment
 
 Install LangChain and dependencies:
 
-```
+```bash
 pip install langchain
 pip install langchain-community
 pip install arxiv
@@ -248,25 +249,27 @@ Typical workflow:
 
 ### Add changes
 
-```
+```bash
 git add .
 ```
 
 ### Commit changes
 
-```
+```bash
 git commit -m "Update LangChain experiments"
 ```
 
 ### Push to GitHub
 
-```
+```bash
 git push
 ```
 
 This allows the project to be accessed from **multiple machines (home laptop / office laptop)**.
 
-### Why Each Step Matters
+---
+
+# 12. Why Each Step Matters
 
 | Step | Purpose | Analogy |
 |------|---------|---------|
@@ -277,7 +280,9 @@ This allows the project to be accessed from **multiple machines (home laptop / o
 | **Retrieve** | Find relevant info | Searching the index |
 | **Generate** | Create answer | Reading and summarizing |
 
-## 📊 Quick Comparison Table
+---
+
+# 13. Quick Comparison Table
 
 | Source Type | Loader Class | Output Format | Best For |
 |-------------|--------------|---------------|----------|
@@ -286,7 +291,10 @@ This allows the project to be accessed from **multiple machines (home laptop / o
 | **Web** | `WebBaseLoader` | One doc per URL | Blogs, articles, docs |
 | **Wikipedia** | `WikipediaLoader` | Multiple articles | Research, definitions |
 
-### Common Pattern (All Loaders)
+---
+
+# 14. Common Pattern (All Loaders)
+
 ```python
 # 1. Import
 from langchain_community.document_loaders import [LoaderName]
@@ -296,9 +304,13 @@ loader = LoaderName("source")
 
 # 3. Load
 docs = loader.load()
+```
 
-# Text Splitters
-# CharacterTextSplitter vs RecursiveCharacterTextSplitter
+---
+
+# 15. Text Splitter
+
+## CharacterTextSplitter vs RecursiveCharacterTextSplitter
 
 When working with LangChain, large documents must be split into smaller chunks before sending them to embeddings or LLMs. Two commonly used splitters are:
 
@@ -314,7 +326,7 @@ But they behave differently when splitting text.
 
 ---
 
-# Example Input
+## Example Input
 
 ```text
 this is computer and i am a student who started learning AI recently, feeling wonderful about this course. i am very happy to have started this journey.
@@ -329,7 +341,7 @@ chunk_overlap = 5
 
 ---
 
-# 1. CharacterTextSplitter
+## CharacterTextSplitter
 
 `CharacterTextSplitter` splits text **strictly based on character limits**.
 It does not try to preserve sentence or word boundaries.
@@ -362,7 +374,7 @@ splitter = CharacterTextSplitter(
 
 ---
 
-# 2. RecursiveCharacterTextSplitter
+## RecursiveCharacterTextSplitter
 
 `RecursiveCharacterTextSplitter` is smarter.
 It tries multiple separators in the following order:
@@ -408,7 +420,7 @@ Chunk2 begins → started
 
 ---
 
-# Side-by-Side Comparison
+## Side-by-Side Comparison
 
 | Chunk | CharacterTextSplitter                           | RecursiveCharacterTextSplitter                  |
 | ----- | ----------------------------------------------- | ----------------------------------------------- |
@@ -419,7 +431,7 @@ Chunk2 begins → started
 
 ---
 
-# Key Differences
+## Key Differences
 
 | Feature               | CharacterTextSplitter  | RecursiveCharacterTextSplitter |
 | --------------------- | ---------------------- | ------------------------------ |
@@ -430,7 +442,7 @@ Chunk2 begins → started
 
 ---
 
-# Visual Representation
+## Visual Representation
 
 ### CharacterTextSplitter
 
@@ -452,7 +464,7 @@ i am very happy to have started this journey
 
 ---
 
-# Recommended Usage
+## Recommended Usage
 
 For most **LangChain / RAG / AI document processing pipelines**, developers prefer:
 
@@ -471,26 +483,25 @@ This balances **context preservation and embedding performance**.
 
 ---
 
-# References
+## References
 
 LangChain Documentation:
 
 https://python.langchain.com/docs/modules/data_connection/document_transformers/
 
-# visual comparision ( CharacterTextSplitter vs RecursiveCharacterTextSplitter)
 ---
 
-# Visual Flow Comparison
+# 16. Visual Flow Comparison
 
 Below is a simplified visual flow showing how each splitter processes the same text.
 
 ---
 
-# CharacterTextSplitter Flow
+## CharacterTextSplitter Flow
 
 CharacterTextSplitter performs **direct character-based cutting** without understanding sentences or words.
 
-```id="flow1"
+```
 Input Text
     ↓
 Apply chunk_size limit
@@ -504,7 +515,7 @@ Output Chunks
 
 Example visual:
 
-```id="flow2"
+```
 this is computer and i am a student who started
 arted learning AI recently, feeling wonderful
 derful about this course. i am very happy to
@@ -519,19 +530,19 @@ Key idea:
 
 ---
 
-# RecursiveCharacterTextSplitter Flow
+## RecursiveCharacterTextSplitter Flow
 
 RecursiveCharacterTextSplitter tries to preserve meaning by splitting text using a **hierarchical separator strategy**.
 
 Separator priority:
 
-```id="flow3"
+```
 Paragraph → Sentence → Word → Character
 ```
 
 Processing flow:
 
-```id="flow4"
+```
 Input Text
     ↓
 Try split by paragraph
@@ -547,7 +558,7 @@ Output Chunks
 
 Example visual:
 
-```id="flow5"
+```
 this is computer and i am a student who started
 started learning AI recently, feeling wonderful
 wonderful about this course
@@ -562,9 +573,9 @@ Key idea:
 
 ---
 
-# Summary Visualization
+## Summary Visualization
 
-```id="flow6"
+```
                 Input Text
                     │
         ┌───────────┴───────────┐
@@ -580,7 +591,7 @@ Less context             Better context for LLM
 
 ---
 
-# Why This Matters for AI Applications
+## Why This Matters for AI Applications
 
 When building **RAG (Retrieval Augmented Generation) pipelines**, chunk quality directly affects answer quality.
 
@@ -592,7 +603,7 @@ Better chunks lead to:
 
 For this reason, most LangChain pipelines prefer:
 
-```python id="flow7"
+```python
 RecursiveCharacterTextSplitter
 ```
 
@@ -600,8 +611,7 @@ over simple character splitting.
 
 ---
 
-
-# 12. Future Learning Topics
+# 17. Future Learning Topics
 
 This repository will continue to expand with the following topics:
 
